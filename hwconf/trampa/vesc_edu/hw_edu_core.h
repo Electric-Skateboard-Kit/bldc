@@ -20,7 +20,7 @@
 #ifndef HW_EDU_CORE_H_
 #define HW_EDU_CORE_H_
 
-#define HW_NAME					"EDU"
+#define HW_NAME					"LECTEC_EDU"
 
 // HW properties
 #define HW_HAS_3_SHUNTS
@@ -165,8 +165,8 @@
 #define GET_INPUT_VOLTAGE()		((V_REG / 4095.0) * (float)ADC_Value[ADC_IND_VIN_SENS] * ((VIN_R1 + VIN_R2) / VIN_R2))
 
 // NTC Termistors
-#define NTC_RES(adc_val)		((4095.0 * 10000.0) / adc_val - 10000.0)
-#define NTC_TEMP(adc_ind)		(1.0 / ((logf(NTC_RES(ADC_Value[adc_ind]) / 10000.0) / 3380.0) + (1.0 / 298.15)) - 273.15)
+#define NTC_RES(adc_val)		(10000.0 * adc_val / ( 4095.0 - adc_val))
+#define NTC_TEMP(adc_ind)		(1.0 / ((logf(NTC_RES(ADC_Value[adc_ind]) / 10000.0) / 3455.0) + (1.0 / 298.15)) - 273.15)
 
 #define NTC_RES_MOTOR(adc_val)	(10000.0 / ((4095.0 / (float)adc_val) - 1.0))
 #define NTC_TEMP_MOTOR(beta)	(1.0 / ((logf(NTC_RES_MOTOR(ADC_Value[ADC_IND_TEMP_MOTOR]) / 10000.0) / beta) + (1.0 / 298.15)) - 273.15)
@@ -188,6 +188,7 @@
 #define HW_UART_RX_PORT			GPIOB
 #define HW_UART_RX_PIN			11
 
+
 // ICU Peripheral for servo decoding
 #define HW_USE_SERVO_TIM4
 #define HW_ICU_TIMER			TIM4
@@ -205,6 +206,12 @@
 #define HW_I2C_SCL_PIN			10
 #define HW_I2C_SDA_PORT			GPIOB
 #define HW_I2C_SDA_PIN			11
+
+// IMU LSM6DS3
+#define LSM6DS3_SDA_GPIO		GPIOB
+#define LSM6DS3_SDA_PIN			11
+#define LSM6DS3_SCL_GPIO		GPIOB
+#define LSM6DS3_SCL_PIN			10
 
 // Hall/encoder pins
 #define HW_HALL_ENC_GPIO1		GPIOC
@@ -237,7 +244,7 @@
 #define HW_SPI_PIN_MISO			6
 
 // BMI160
-#define BMI160_SPI_PORT_NSS		GPIOC
+//#define BMI160_SPI_PORT_NSS		GPIOC
 #define BMI160_SPI_PIN_NSS		13
 #define BMI160_SPI_PORT_SCK		GPIOB
 #define BMI160_SPI_PIN_SCK		12
