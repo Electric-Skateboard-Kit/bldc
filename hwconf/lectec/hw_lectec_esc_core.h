@@ -79,8 +79,10 @@
 #define CURRENT_FILTER_OFF()	palClearPad(CURRENT_FILTER_GPIO, CURRENT_FILTER_PIN)
 
 // Shutdown pin
-#define HW_SHUTDOWN_GPIO		GPIOC
-#define HW_SHUTDOWN_PIN			5
+#define HW_SHUTDOWN_GPIO		GPIOB
+#define HW_SHUTDOWN_PIN			0
+#define HW_SHUTDOWN_SENSE_GPIO 	GPIOC
+#define HW_SHUTDOWN_SENSE_PIN	5
 #define HW_SHUTDOWN_HOLD_ON()	palSetPad(HW_SHUTDOWN_GPIO, HW_SHUTDOWN_PIN)
 #define HW_SHUTDOWN_HOLD_OFF()	palClearPad(HW_SHUTDOWN_GPIO, HW_SHUTDOWN_PIN)
 #define HW_SAMPLE_SHUTDOWN()	hw_sample_shutdown_button()
@@ -159,8 +161,10 @@
 #ifndef CURRENT_AMP_GAIN
 #define CURRENT_AMP_GAIN		50.0
 #endif
+//Factor correction due to error on shunt resistors.
 #ifndef CURRENT_SHUNT_RES
-#define CURRENT_SHUNT_RES		0.0005
+#define CURRENT_SHUNT_RES		(0.0005 * 0.80)
+//#define CURRENT_SHUNT_RES		0.0005
 #endif
 
 // Input voltage
@@ -209,6 +213,7 @@
 #define HW_I2C_SDA_PORT			GPIOB
 #define HW_I2C_SDA_PIN			11
 
+//Change this to other pins, 
 // IMU LSM6DS3
 #define LSM6DS3_SDA_GPIO		GPIOB
 #define LSM6DS3_SDA_PIN			11
@@ -256,10 +261,10 @@
 #define BMI160_SPI_PIN_MISO		4
 
 // NRF SWD
-#define NRF5x_SWDIO_GPIO		GPIOB
-#define NRF5x_SWDIO_PIN			0
-#define NRF5x_SWCLK_GPIO		GPIOB
-#define NRF5x_SWCLK_PIN			1
+//#define NRF5x_SWDIO_GPIO		GPIOB
+//#define NRF5x_SWDIO_PIN			0
+//#define NRF5x_SWCLK_GPIO		GPIOB
+//#define NRF5x_SWCLK_PIN			1
 
 // Permanent UART
 #define HW_UART_P_BAUD			115200
