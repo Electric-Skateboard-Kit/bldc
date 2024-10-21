@@ -163,8 +163,8 @@
 #endif
 //Factor correction due to error on shunt resistors.
 #ifndef CURRENT_SHUNT_RES
-#define CURRENT_SHUNT_RES		(0.0005 * 0.80)
-//#define CURRENT_SHUNT_RES		0.0005
+//#define CURRENT_SHUNT_RES		(0.0005 * 0.80)
+#define CURRENT_SHUNT_RES		0.0005
 #endif
 
 // Input voltage
