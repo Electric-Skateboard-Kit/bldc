@@ -68,7 +68,7 @@
 #define PHASE_FILTER_OFF()		palClearPad(PHASE_FILTER_GPIO, PHASE_FILTER_PIN)
 
 // Sensor port voltage control
-#define SENSOR_VOLTAGE_GPIO		GPIOC
+#define SENSOR_VOLTAGE_GPIO		GPIOH
 #define SENSOR_VOLTAGE_PIN		12
 #define SENSOR_PORT_5V()		palSetPad(SENSOR_VOLTAGE_GPIO, SENSOR_VOLTAGE_PIN)
 #define SENSOR_PORT_3V3()		palClearPad(SENSOR_VOLTAGE_GPIO, SENSOR_VOLTAGE_PIN)
@@ -202,7 +202,7 @@
 #define HW_ICU_DEV				ICUD4
 #define HW_ICU_CHANNEL			ICU_CHANNEL_1
 #define HW_ICU_GPIO_AF			GPIO_AF_TIM4
-#define HW_ICU_GPIO				GPIOB
+#define HW_ICU_GPIO				GPIOH
 #define HW_ICU_PIN				6
 
 // I2C Peripheral
@@ -216,9 +216,9 @@
 //Change this to other pins, 
 // IMU LSM6DS3
 #define LSM6DS3_SDA_GPIO		GPIOB
-#define LSM6DS3_SDA_PIN			11
-#define LSM6DS3_SCL_GPIO		GPIOB
-#define LSM6DS3_SCL_PIN			10
+#define LSM6DS3_SDA_PIN			6
+#define LSM6DS3_SCL_GPIO		GPIOC
+#define LSM6DS3_SCL_PIN			12
 
 // Hall/encoder pins
 #define HW_HALL_ENC_GPIO1		GPIOC
