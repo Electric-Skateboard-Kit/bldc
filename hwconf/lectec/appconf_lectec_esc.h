@@ -340,7 +340,7 @@
 
 // Throttle Expo
 #ifndef APPCONF_CHUK_THROTTLE_EXP
-#define APPCONF_CHUK_THROTTLE_EXP 0
+#define APPCONF_CHUK_THROTTLE_EXP 0.75
 #endif
 
 // Throttle Expo Brake
@@ -350,7 +350,7 @@
 
 // Throttle Expo Mode
 #ifndef APPCONF_CHUK_THROTTLE_EXP_MODE
-#define APPCONF_CHUK_THROTTLE_EXP_MODE 2
+#define APPCONF_CHUK_THROTTLE_EXP_MODE 1
 #endif
 
 // Multiple VESCs Over CAN
