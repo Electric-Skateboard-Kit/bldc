@@ -25,22 +25,22 @@
 
 // Motor Current Max
 #ifndef MCCONF_L_CURRENT_MAX
-#define MCCONF_L_CURRENT_MAX 23
+#define MCCONF_L_CURRENT_MAX 20
 #endif
 
 // Motor Current Max Brake
 #ifndef MCCONF_L_CURRENT_MIN
-#define MCCONF_L_CURRENT_MIN -23
+#define MCCONF_L_CURRENT_MIN -20
 #endif
 
 // Battery Current Max
 #ifndef MCCONF_L_IN_CURRENT_MAX
-#define MCCONF_L_IN_CURRENT_MAX 50
+#define MCCONF_L_IN_CURRENT_MAX 20
 #endif
 
 // Battery Current Max Regen
 #ifndef MCCONF_L_IN_CURRENT_MIN
-#define MCCONF_L_IN_CURRENT_MIN -50
+#define MCCONF_L_IN_CURRENT_MIN -20
 #endif
 
 // Input Current Limit Map Start
@@ -55,7 +55,7 @@
 
 // Absolute Maximum Current
 #ifndef MCCONF_L_MAX_ABS_CURRENT
-#define MCCONF_L_MAX_ABS_CURRENT 30
+#define MCCONF_L_MAX_ABS_CURRENT 34.34
 #endif
 
 // Max ERPM Reverse
@@ -95,22 +95,22 @@
 
 // Battery Voltage Cutoff Start
 #ifndef MCCONF_L_BATTERY_CUT_START
-#define MCCONF_L_BATTERY_CUT_START 6
+#define MCCONF_L_BATTERY_CUT_START 20.4
 #endif
 
 // Battery Voltage Cutoff End
 #ifndef MCCONF_L_BATTERY_CUT_END
-#define MCCONF_L_BATTERY_CUT_END 6
+#define MCCONF_L_BATTERY_CUT_END 18.6
 #endif
 
 // Battery Voltage Regen Cutoff Start
 #ifndef MCCONF_L_BATTERY_REGEN_CUT_START
-#define MCCONF_L_BATTERY_REGEN_CUT_START 1000
+#define MCCONF_L_BATTERY_REGEN_CUT_START 25.5
 #endif
 
 // Battery Voltage Regen Cutoff End
 #ifndef MCCONF_L_BATTERY_REGEN_CUT_END
-#define MCCONF_L_BATTERY_REGEN_CUT_END 1100
+#define MCCONF_L_BATTERY_REGEN_CUT_END 26
 #endif
 
 // Slow ABS Current Limit
@@ -260,12 +260,12 @@
 
 // Current KP
 #ifndef MCCONF_FOC_CURRENT_KP
-#define MCCONF_FOC_CURRENT_KP 0.1157
+#define MCCONF_FOC_CURRENT_KP 0.1148
 #endif
 
 // Current KI
 #ifndef MCCONF_FOC_CURRENT_KI
-#define MCCONF_FOC_CURRENT_KI 143.8
+#define MCCONF_FOC_CURRENT_KI 152.61
 #endif
 
 // Zero Vector Frequency
@@ -310,27 +310,27 @@
 
 // Motor Inductance (L)
 #ifndef MCCONF_FOC_MOTOR_L
-#define MCCONF_FOC_MOTOR_L 0.00011568
+#define MCCONF_FOC_MOTOR_L 0.00011483
 #endif
 
 // Motor Inductance Difference (Lq - Ld)
 #ifndef MCCONF_FOC_MOTOR_LD_LQ_DIFF
-#define MCCONF_FOC_MOTOR_LD_LQ_DIFF 4.175e-05
+#define MCCONF_FOC_MOTOR_LD_LQ_DIFF 4.210e-05
 #endif
 
 // Motor Resistance (R)
 #ifndef MCCONF_FOC_MOTOR_R
-#define MCCONF_FOC_MOTOR_R 0.1438
+#define MCCONF_FOC_MOTOR_R 0.1526
 #endif
 
 // Motor Flux Linkage (λ)
 #ifndef MCCONF_FOC_MOTOR_FLUX_LINKAGE
-#define MCCONF_FOC_MOTOR_FLUX_LINKAGE 0.005422
+#define MCCONF_FOC_MOTOR_FLUX_LINKAGE 0.005908
 #endif
 
 // Observer Gain (x1M)
 #ifndef MCCONF_FOC_OBSERVER_GAIN
-#define MCCONF_FOC_OBSERVER_GAIN 3.402e+07
+#define MCCONF_FOC_OBSERVER_GAIN 2.865e+07
 #endif
 
 // Observer Gain At Minimum Duty
@@ -420,32 +420,32 @@
 
 // Hall Table [1]
 #ifndef MCCONF_FOC_HALL_TAB_1
-#define MCCONF_FOC_HALL_TAB_1 41
+#define MCCONF_FOC_HALL_TAB_1 93
 #endif
 
 // Hall Table [2]
 #ifndef MCCONF_FOC_HALL_TAB_2
-#define MCCONF_FOC_HALL_TAB_2 107
+#define MCCONF_FOC_HALL_TAB_2 161
 #endif
 
 // Hall Table [3]
 #ifndef MCCONF_FOC_HALL_TAB_3
-#define MCCONF_FOC_HALL_TAB_3 75
+#define MCCONF_FOC_HALL_TAB_3 126
 #endif
 
 // Hall Table [4]
 #ifndef MCCONF_FOC_HALL_TAB_4
-#define MCCONF_FOC_HALL_TAB_4 175
+#define MCCONF_FOC_HALL_TAB_4 26
 #endif
 
 // Hall Table [5]
 #ifndef MCCONF_FOC_HALL_TAB_5
-#define MCCONF_FOC_HALL_TAB_5 7
+#define MCCONF_FOC_HALL_TAB_5 61
 #endif
 
 // Hall Table [6]
 #ifndef MCCONF_FOC_HALL_TAB_6
-#define MCCONF_FOC_HALL_TAB_6 140
+#define MCCONF_FOC_HALL_TAB_6 193
 #endif
 
 // Hall Table [7]

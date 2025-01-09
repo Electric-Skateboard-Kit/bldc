@@ -30,7 +30,7 @@
 
 // Can Messages Rate 1
 #ifndef APPCONF_CAN_STATUS_MSGS_R1
-#define APPCONF_CAN_STATUS_MSGS_R1 0
+#define APPCONF_CAN_STATUS_MSGS_R1 63
 #endif
 
 // Can Messages Rate 2
@@ -320,7 +320,7 @@
 
 // Input Deadband
 #ifndef APPCONF_CHUK_HYST
-#define APPCONF_CHUK_HYST 0.15
+#define APPCONF_CHUK_HYST 0.2
 #endif
 
 // Positive Ramping Time
@@ -370,7 +370,7 @@
 
 // Use Smart Reverse
 #ifndef APPCONF_CHUK_USE_SMART_REV
-#define APPCONF_CHUK_USE_SMART_REV 1
+#define APPCONF_CHUK_USE_SMART_REV 0
 #endif
 
 // Smart Reverse Max Duty Cycle
